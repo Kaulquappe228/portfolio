@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaulquappe Dev — Indie Games</title>
+    <!-- Подключаем современный шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Сброс стилей и базовые настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0f0f12; /* Темный фоновый цвет */
+            color: #e2e2e8;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px; /* Узкий аккуратный блок по центру */
+            margin-top: 40px;
+        }
+
+        /* Шапка с логотипом */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: #2a2a35; /* Пустышка, пока нет картинки логотипа */
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        /* Секции сайта */
+        section {
+            margin-bottom: 45px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #71717a;
+            margin-bottom: 15px;
+        }
+
+        p.bio {
+            color: #a1a1aa;
+            font-size: 1.05rem;
+        }
+
+        /* Карточки для будущих игр */
+        .games-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .game-card {
+            background: #18181b;
+            border: 1px solid #27272a;
+            padding: 20px;
+            border-radius: 14px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .game-card:hover {
+            border-color: #3f3f46;
+            transform: translateY(-2px);
+        }
+
+        .game-card h3 {
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .game-card p {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+        }
+
+        /* Контакты */
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 500px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-btn {
+            display: flex;
+            flex-direction: column;
+            background: #18181b;
+            border: 1px solid #27272a;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background: #27272a;
+            border-color: #52525b;
+        }
+
+        .contact-btn span {
+            font-size: 0.8rem;
+            color: #71717a;
+            margin-bottom: 4px;
+        }
+
+        .contact-btn strong {
+            font-size: 0.95rem;
+            word-break: break-all;
+        }
+
+        /* Футер */
+        footer {
+            margin-top: 60px;
+            padding-bottom: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #52525b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- ШАПКА: Логотип и Название -->
+        <header>
+            <!-- Если есть логотип, положите файл logo.png рядом с index.html. Если нет — покажется серый квадрат -->
+            <img src="logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+            <div class="logo-text">Kaulquappe Dev</div>
+        </header>
+
+        <!-- О СЕБЕ -->
+        <section>
+            <h1>Создаю игры.</h1>
+            <p class="bio">Инди-разработчик. Делаю игры для iOS и мобильных платформ. Следите за процессом разработки в Telegram.</p>
+        </section>
+
+        <!-- ИГРЫ (Здесь можно добавлять свои проекты) -->
+        <section>
+            <h2>Проекты</h2>
+            <div class="games-grid">
+                
+                <!-- Проект 1 -->
+                <div class="game-card">
+                    <h3>Секретный проект #1</h3>
+                    <p>Игра находится в стадии активной разработки. Скоро анонс и релиз в App Store!</p>
+                </div>
+
+                <!-- Чтобы добавить новую игру, просто скопируйте блок выше и вставьте сюда -->
+
+            </div>
+        </section>
+
+        <!-- КОНТАКТЫ -->
+        <section>
+            <h2>Контакты & Ссылки</h2>
+            <div class="contacts-grid">
+                
+                <!-- Telegram -->
+                <a href="https://t.me/kaulquappe228tg" target="_blank" class="contact-btn">
+                    <span>Telegram Канал</span>
+                    <strong>@kaulquappe228tg</strong>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:kaulquappe228@gmail.com" class="contact-btn">
+                    <span>Электронная почта</span>
+                    <strong>kaulquappe228@gmail.com</strong>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ФУТЕР -->
+        <footer>
+            <p>© 2024 Kaulquappe Dev. Все права защищены.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
